@@ -1,0 +1,80 @@
+/** Changelog for SP 
+ *
+ * 1. Rename: #seitennavigation -> .seitennavigation;
+ * 2. Change Path to bgi
+ * 3. SP Customizations
+ *
+ * by DF
+ **/
+
+.seitennavigation {
+	background: #fff;
+}
+
+/*** Erste Liste, die Hauptpunkte ***/
+.seitennavigation ul {
+	list-style: 		none;
+	margin: 			0 !important;
+	border-top: 		2px solid #7c9c09;
+	border-bottom: 		1px solid #ccc;
+}
+
+.seitennavigation ul ul{
+	list-style: 		none;
+	margin: 			0;
+	border-bottom: 		none;
+	border-top: 		none;
+	background-color: #fff;
+}
+
+.seitennavigation ul li {
+	position: 			relative;
+	margin: 			0 !important;
+}
+
+.seitennavigation ul li a { 
+	display: 			block; 
+}
+
+.ms-core-listMenu-verticalBox li.static > ul.static > li.static > .ms-core-listMenu-item,
+.ms-core-listMenu-verticalBox > .ms-core-listMenu-item, 
+.ms-core-listMenu-verticalBox li.static > .ms-core-listMenu-item  {
+	color: 				#003560;
+	border-top:	1px solid #ccc;
+	text-decoration:	none;
+	background-image:	url(../img/navigation/pfeil-rechts2.gif);
+	background-repeat:	no-repeat;
+	background-position:0.25em 50%;
+	padding: 0.25em 0.25em 0.25em 1em;
+}
+	
+.seitennavigation li > a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, 
+.seitennavigation li > a.ms-core-listMenu-item:hover, 
+.seitennavigation li > a.ms-core-listMenu-item:active,
+.seitennavigation li > a.ms-core-listMenu-item:focus {
+	background-color:#e8efcf;
+	text-decoration: none;
+}
+		
+.seitennavigation ul ul li a{
+	margin-left: 0.75em;
+}
+
+.seitennavigation ul ul ul li a {
+	margin-left: 1.5em;
+}
+
+
+
+/* .aktiverLink */
+.seitennavigation .ms-core-listMenu-selected:link, 
+.seitennavigation .ms-core-listMenu-selected:visited, 
+.seitennavigation .ms-core-listMenu-selected {
+	background-color: #e8efcf;  
+	font-weight: bold;
+}
+
+a.aktivebox_ueberschrift {
+	font-weight:bold !important;
+	background-color:#e8efcf;
+}

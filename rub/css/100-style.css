@@ -1,0 +1,161 @@
+﻿/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS framework
+ * (en) stylesheet for screen layout
+ * (de) Stylesheet für das Bildschirm-Layout
+ *
+ * @creator       YAML Builder V1.2.1 (http://builder.yaml.de)
+ * @file          basemod.css
+ * @-yaml-minver  3.3
+ */
+
+  /** 
+   * (en) Forcing vertical scrollbars in IE8, Firefox, Webkit & Opera 
+   * (de) Erzwingen vertikaler Scrollbalken in IE8, Firefox, Webkit & Opera 
+   *
+   * @workaround
+   * @affected IE8, FF, Webkit, Opera
+   * @css-for all
+   * @valid CSS3
+   */
+
+  body { overflow-y: scroll; }
+
+  /*-------------------------------------------------------------------------*/
+
+  /* (en) Marginal areas & page background */
+  /* (de) Randbereiche & Seitenhintergrund */ 
+  body { 
+  	background-color: #f3f3f3; 
+  	padding: 0 0 10px 0; 
+  }
+
+  /* Layout Alignment | Layout-Ausrichtung */
+  .page_margins {	
+  	margin: 0 auto;
+	width: 960px;
+	border: 0 none;
+    box-shadow: 0 0 10px #000;
+    background-color: #fff; 
+}
+
+  /* Layout Properties | Layout-Eigenschaften */
+  #teaser { clear:both; padding: 0 10px; margin: 10px 0; }
+ #nav {
+	overflow:visible;
+	background-color: #709708;
+	min-height: 2.3em;
+	border-bottom: 1px solid #f3f3f3;
+	z-index:999;
+
+}
+
+/* Navi */
+
+#schriftzug {
+    float: left;
+    padding-top: 20px;
+}
+
+ #topnav { 
+ 	position:relative;
+ 	text-align:right; 
+ 	color: #aaa; 
+ 	background: transparent; 
+ 	z-index:1;
+ }
+
+#topnav img{
+    float: right;
+    margin-left: 20px;
+    width: 102px;
+}
+
+ #topnav .rublogo {
+	position:absolute;
+	top:0px; 
+ 	right:-30px; 
+ }
+
+ #uninavi { 
+ 	line-height: 4em;
+ 	padding-right: 90px; 
+ }
+
+ #uninavi a:link, #uninavi a:visited {
+    color: #5C5C5C;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.wrapper {
+	border: 0 none;
+}
+
+/* Header */
+
+#header { 
+	background-image:url(../img/bg-oben-unterseite-grau136.gif); 
+	background-repeat:repeat-x; 
+	color: #000;
+}
+
+#header h1 {
+	color: #709108;
+	font-size: 200%;
+	font-weight: bold;
+	padding: 10px 0 10px 10px;
+	text-transform: uppercase;
+}
+
+#main { margin: 10px 0; background: #fff; z-index:99; }
+#footer {
+	padding: 10px 0;
+	color:#666;
+	background: #f9f9f9;
+	border-top: 5px #efefef solid;
+}
+
+#footer .wrapper {
+	padding: 0 10px;
+}
+
+
+
+  /*-------------------------------------------------------------------------*/
+
+  /**
+   * (en) Formatting content container
+   * (de) Formatierung der Inhalts-Container
+   *
+   */
+
+  .col1 { float: left; width: 25%;  margin:0 }
+  .col2 { width: auto; margin: 0 2% 0 25%}
+  .col1_content { padding: 0 20px 0 10px }
+  .col2_content { padding: 0 10px }
+
+
+
+/* Overwrite SP-CSS */
+
+#pageStatusBar[class], .ms-status-msg {
+	margin-bottom: 0;
+}
+
+/* Edit Mode */
+
+.edit-mode-panel {
+  background-color: #efefef;
+  padding: 2em;
+}
+
+/* Reset these div's to display:block due to errors in displaying Github:Gists */
+.ms-webpart-cell-vertical {
+  display: block;
+}
+.ms-webpart-chrome-vertical {
+  display: block;
+}

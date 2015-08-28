@@ -1,0 +1,298 @@
+﻿<%@Master language="C#"%>
+<%@Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="wssucmui" TagName="MUISelector" Src="~/_controltemplates/15/MUISelector.ascx"%>
+<%@Register TagPrefix="wssuc" TagName="Welcome" Src="~/_controltemplates/15/Welcome.ascx"%>
+<%@Register TagPrefix="SearchWC" Namespace="Microsoft.Office.Server.Search.WebControls" Assembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="PublishingRibbon" TagName="PublishingRibbon" Src="~/_controltemplates/15/Ribbon.ascx"%>
+
+<!DOCTYPE HTML>
+<SharePoint:SPHtmlTag runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;">
+    <head runat="server">
+        <meta http-equiv="X-UA-Compatible" content="IE=10" />
+        <meta charset="utf-8" />
+        <meta name="GENERATOR" content="Microsoft SharePoint" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Expires" content="0" />
+        
+        <%--==== STARTER: Robots  ======================================================================================================= --%>
+        <SharePoint:RobotsMetaTag runat="server" />
+        
+        <%--==== STARTER: Favicon / Windows Tile ======================================================================================== --%> 
+        <SharePoint:SPShortcutIcon runat="server" IconUrl="../_catalogs/masterpage/rub/img/uvnet_blau_32x32.png" />
+        <SharePoint:SPPinnedSiteTile runat="server" TileUrl="../_catalogs/masterpage/rub/img/Logo_blau_metrotile_144x144.png" TileColor="#003560" />
+
+
+        <%--==== STARTER: Page Title loaded from page or page layout ==================================================================== --%>
+        <SharePoint:PageTitle runat="server">
+            <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"><SharePoint:ProjectProperty Property="Title" runat="server" /></asp:ContentPlaceHolder>
+        </SharePoint:PageTitle>
+        
+        <%--==== STARTER: SP Scripts and CSS  =========================================================================================== --%>
+        <SharePoint:StartScript runat="server" />
+        <SharePoint:CssLink runat="server" Version="15" />
+        <SharePoint:CacheManifestLink runat="server" />
+        <SharePoint:PageRenderMode runat="server" RenderModeType="Standard" />
+        <SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:CustomJSUrl runat="server" />
+        <SharePoint:SoapDiscoveryLink runat="server" />
+
+        <%--==== STARTER: Core SharePoint CSS =========================================================================================== --%>
+        <SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
+    
+        <%--==== STARTER: Custom CSS  =================================================================================================== --%>
+        <SharePoint:CssRegistration name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/rub/css/1-base.css %&gt;" runat="server" />
+        <SharePoint:CssRegistration name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/rub/css/2-content.css %&gt;" runat="server"  />
+        <SharePoint:CssRegistration name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/rub/css/3-quernavigation.css %&gt;" runat="server"  />
+        <SharePoint:CssRegistration name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/rub/css/4-seitennavigation.css %&gt;" runat="server"  />
+        <SharePoint:CssRegistration name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/rub/css/5-kennzeichnung-links.css %&gt;" runat="server"  />
+        <SharePoint:CssRegistration name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/rub/css/100-style.css %&gt;" runat="server" />
+        <SharePoint:CssRegistration name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/rub/css/101-content-web-parts.css %&gt;" runat="server" />
+ 
+        <%--==== STARTER: Additional header placeholder - overridden by asp:content on pages or page layouts  =========================== --%>
+        <asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
+        <SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" />
+                
+    </head>
+    
+    <body>
+        <%--==== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== --%>
+        <SharePoint:SPClientIDGenerator runat="server" 
+        	ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
+        <SharePoint:ImageLink runat="server" />
+        <SharePoint:SharePointForm 
+        	onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server">
+        
+        <%--==== STARTER: SharePoint Reqs this for adding columns ===================================================== --%>
+        <script type="text/javascript"> 
+        	var submitHook = function () { return false; }; theForm._spOldSubmit = theForm.submit; theForm.submit = function () 
+        	{ if (!submitHook()) { this._spOldSubmit(); } }; 
+        </script>
+
+        <%--==== STARTER: Web Part Manager  ============================================================================================= --%>
+        <WebPartPages:SPWebPartManager runat="server"/>     
+        
+            <%--==== STARTER: ScriptManager ===================================================== --%>
+            <asp:ScriptManager id="ScriptManager" runat="server" 
+            	EnablePageMethods="false" 
+            	EnablePartialRendering="true" 
+            	EnableScriptGlobalization="false" 
+            	EnableScriptLocalization="true" />
+
+            <%--==== STARTER: Ribbon Code Starts Here ===================================================== --%>
+            <div id="ms-designer-ribbon">
+	            <PublishingRibbon:PublishingRibbon runat="server"/>
+			</div>  
+
+            <%--==== STARTER: Ribbon Code Ends Here  ======================================================================================== --%>
+
+            <%--==== STARTER: Authentication / Login link hidden for everyone by anonymous users  =========================================== --%>
+            <SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
+                <wssuc:Welcome runat="server" EnableViewState="false" />
+            </SharePoint:SPSecurityTrimmedControl>
+
+            <%--==== STARTER: Main Scrolling Body Starts Here =============================================================================== --%>
+            <div id="s4-workspace">
+                <div id="s4-bodyContainer">
+                
+                <%--==== STARTER: This decides where the web part menu lives ===================================================== --%>
+                <div id="DeltaPlaceHolderMain" runat="server">
+                
+                <%--==== STARTER: style.css adds width and margin =========================================================================================== --%>
+                <div class="customWidth">
+                    
+                <%--==== STARTER: Body Area (includes left nav and body) ==================================================================== --%>
+                    
+                    <%--==== STARTER: Main Content ========================================================================================== --%>
+                    <div class="page_margins">
+                        <div class="wrapper">
+                            <div id="header">
+
+                                <%--==== STARTER: Schriftzug with link to root ======================================================================= --%>
+                                <div id="schriftzug">
+                                     <img src="../_catalogs/masterpage/rub/img/rub-schriftzug.gif" alt="Zur Startseite">
+                                </div>
+
+
+                                <%--==== STARTER: Site Logo with link to root ======================================================================= --%>
+                                <div id="topnav">       
+                                    <div class="rublogo ms-dialogHidden">
+                                        <img src="../_catalogs/masterpage/rub/img/logo-rub-102.gif" alt="Zur Startseite">
+                                    </div>
+                                    <span id="uninavi">
+                                        <a title="Startseite der RUB" href="http://www.rub.de"> Startseite</a>
+                                        |
+                                        <a title="RUB Schnellzugriff" href="http://www.ruhr-uni-bochum.de/uebersicht/">Übersicht</a>
+                                        |
+                                        <a title="RUB Suchmaschine" href="http://www.ruhr-uni-bochum.de/suche/">Suche</a>
+                                        |
+                                        <a title="Stichwortverzeichnis der RUB" href="http://www.ruhr-uni-bochum.de/a-z/">A-Z</a>
+                                    </span>
+                                </div>
+                                
+                                <%--==== STARTER: SharePoint looks for this div ID s4-titlerow for the "Focus on Content" Button ======================== --%>
+                                <div id="s4-titlerow">
+                                    <div id="ueberschrift">
+                                        <h1>
+                                            <%--==== STARTER: SP Reqs DeltaPlaceHolderPageTitleInTitleArea and PlaceHolderPageTitleInTitleArea for adding Apps in Site Content =================== --%>
+                                            <SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server">                         
+                                                <asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server">
+													<SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider">
+                                                        <PATHSEPARATORTEMPLATE>
+                                                            <SharePoint:ClusteredDirectionalSeparatorArrow runat="server" />
+                                                        </PATHSEPARATORTEMPLATE>
+                                                    </SharePoint:SPTitleBreadcrumb>
+                                                </asp:ContentPlaceHolder>
+                                            </SharePoint:AjaxDelta>
+                                        </h1>
+                                        <%-- TODO: Style PageTitle --%>
+                                        <h2>
+										<SharePoint:ProjectProperty Property="Title" runat="server" visible="false"/></h2>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <%-- DF: Global Navigation --%>
+
+                            <div id="nav" class="ms-dialogHidden">
+                                <!-- skiplink anchor: navigation -->
+                                <a id="navigation" name="navigation"></a>
+                                <div id="hauptnavigation" class="ms-dialogHidden">
+                                    <!-- main navigation: horizontal list -->
+                                    <PublishingNavigation:PortalSiteMapDataSource 
+                                        ID="topSiteMap" 
+                                        runat="server" 
+                                        EnableViewState="false" 
+                                        ShowStartingNode="false" 
+                                        SiteMapProvider="GlobalNavigationSwitchableProvider" 
+                                        StartFromCurrentNode="true" 
+                                        StartingNodeOffset="0" 
+                                        TrimNonCurrentTypes="Heading"/>
+                                    <SharePoint:AspMenu 
+                                        ID="TopNavigationMenu"
+                                        runat="server" 
+                                        AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" 
+                                        AdjustForShowStartingNode="true"
+                                        DataSourceID="topSiteMap" 
+                                        EnableViewState="false" 
+                                        MaximumDynamicDisplayLevels="1" 
+                                        Orientation="Horizontal" 
+                                        UseSeparateCss="false" 
+                                        UseSimpleRendering="true" 
+                                        SkipLinkText=""
+                                        StaticDisplayLevels="1"/>
+                                </div>
+                            </div>
+
+                            <%-- DF: Breadcrumbs --%>
+                            <div id="teaser">
+                                   <div class="subcolumns">
+                                       <div class="c75l">
+                                           <div class="subcl">
+                                            <div id="history" class="ms-dialogHidden">
+                                                   <asp:sitemappath 
+                                                       runat="server"
+                                                       CurrentNodeStyle-Font-Bold="true"
+                                                       hideinteriorrootnodes="true"
+                                                       ID="Sitemappath1"
+                                                       PathSeparator=" » " 
+                                                       rendercurrentnodeaslink="false" 
+                                                       sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider"> 
+                                                   </asp:sitemappath>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="c25r">
+                                        <div class="subcr">
+                                            <div id="sprache"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="main">
+    
+                                <%--==== STARTER: Current navigation =========================================================================================== --%>
+                                <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList col1">
+                                    <div class="ms-core-navigation col1_content">
+
+                                        <%--==== STARTER: SP Reqs PlaceHolderLeftNavBar for adding Apps in Site Content =================== --%>
+                                        <SharePoint:AjaxDelta ID="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" runat="server">
+                                            <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
+												<asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server" />
+                                                <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server" />
+                                                <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server" />
+                                                <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
+                                                <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
+                                                
+                                                <div class="ms-core-sideNavBox-removeLeftMargin seitennavigation">
+                                                    <SharePoint:SPNavigationManager id="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="V4QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false">
+                                                        <%--==== STARTER: Current navigation Data Provider ==================================================================================== --%><SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">
+														
+                                                            <Template_Controls>
+                                                                <asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server" />
+                                                            </Template_Controls>
+                                                        </SharePoint:DelegateControl><%--==== STARTER: Current navigation menu ==================================================================================== --%><SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" Orientation="Vertical" StaticDisplayLevels="3" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="0" SkipLinkText="" /></SharePoint:SPNavigationManager>
+                                                </div>
+                                            </asp:ContentPlaceHolder>
+                                        </SharePoint:AjaxDelta>
+                                        
+                                    </div>
+                                </div>
+
+                                <%--==== STARTER: Main Placeholder gets replaced with content of the page ======================================= --%>
+                                
+                                <div class="col2">
+                                    <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+                                </div>
+                                
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div id="footer" class="ms-dialogHidden">
+                                <div class="wrapper">
+                                    <p>Letzte Änderung: 
+									<SharePoint:FieldValue FieldName="Modified" runat="server" id="modified" ControlMode="display"/> | Ansprechpartner: <a href="mailto:webmaster@ruhr-uni-bochum.de">Kontakt</a>  </p> 
+                                </div>      
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                </div>
+            </div>
+            </div>
+            <%--==== STARTER: Main Scrolling Body Ends Here ================================================================================= --%>
+            
+            <%--==== STARTER: Needed for form stuff ========================================================================================= --%>
+            <asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
+				<SharePoint:formdigest runat="server"/>
+            </asp:ContentPlaceHolder>
+        
+            <%--==== STARTER: Hidden Placeholders =========================================================================================== --%> 
+            <asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageDescription" Visible="False" runat="server" />
+
+
+            <%-- DF: Placeholder Suche deaktiviert --%>
+
+            <%--==== STARTER: Search Control ==================================================================================== --%>
+            <asp:ContentPlaceHolder id="PlaceHolderSearchArea" Visible="False" runat="server">
+				<SearchWC:SearchBoxScriptWebPart UseSiteCollectionSettings="true" EmitStyleReference="false" ShowQuerySuggestions="true" ChromeType="None" UseSharedSettings="true" TryInplaceQuery="false" ServerInitialRender="true" runat="server" __WebPartId="{8D1BE77F-FE47-4473-B477-4424F6C34BEE}" __MarkupType="vsattributemarkup" WebPart="true" Height="" Width=""/>
+            </asp:ContentPlaceHolder>
+                            
+        </SharePoint:SharePointForm>
+    
+        <%--==== STARTER: Adds extra stuff like another form for Survey management ====================================================== --%> 
+        <asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
+
+    </body>
+    
+    <!-- Based on Starter SP2013 Master Page originally by Randy Drisgill (http://blog.drisgill.com) - April 21, 2013 -->
+</SharePoint:SPHtmlTag>

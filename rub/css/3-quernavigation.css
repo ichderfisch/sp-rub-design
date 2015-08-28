@@ -1,0 +1,86 @@
+/** Changelog for SP
+ *
+ * 1. Change Path to bgi
+ * 2. Changed CSS to SP's
+ *
+ **/
+
+
+
+/*** RUB Hauptnavigation quer "grüne Leiste"  ***/
+#hauptnavigation{
+    background:#7C9C09 url(../img/backgrounds/bg-top1.gif) repeat-x;
+    line-height: 2.4em;
+}
+
+#nav ul {
+    margin-left: 3px;
+}
+
+/* DF: New CSS for Sharepoint! */
+
+.ms-core-listMenu-horizontalBox ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.ms-core-listMenu-horizontalBox a.ms-core-listMenu-item,
+.ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:link,
+.ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:visited {
+    border: none;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #CFCDEF;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0.4em 0.7em;
+    text-decoration: none;
+}
+
+.ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover,
+.ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:focus,
+.ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.ms-core-listMenu-selected:hover,
+.ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.ms-core-listMenu-selected:focus {
+    background-color: #003560;
+    outline: 0;
+    color: #fff;
+}
+
+.ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.selected { 
+    background-color:#003560 
+}
+
+.ms-core-listMenu-horizontalBox li li { 
+    background-color: #E1E1E1;
+    background-image: none;
+}
+
+.ms-core-listMenu-horizontalBox a.dynamic.ms-core-listMenu-item,
+.ms-core-listMenu-horizontalBox a.dynamic.ms-core-listMenu-item:link,
+.ms-core-listMenu-horizontalBox a.dynamic.ms-core-listMenu-item:visited {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    color: #003560;
+    letter-spacing: normal;
+    font-weight: normal;
+}
+
+.ms-core-listMenu-horizontalBox a.dynamic.ms-core-listMenu-item:hover,
+.ms-core-listMenu-horizontalBox a.dynamic.ms-core-listMenu-item:focus {
+    color: #fff;
+}
+
+.ms-core-listMenu-horizontalBox .dynamic-children.additional-background {
+    background-image: none;
+    padding-right: 0;
+}
+
+.ms-core-listMenu-horizontalBox ul.dynamic { 
+    box-shadow: 2px 2px 6px #ccc;
+    padding: 0;
+    width: 15em;
+}
