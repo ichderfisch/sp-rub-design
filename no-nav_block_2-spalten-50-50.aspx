@@ -30,21 +30,22 @@
 		
 		<div class="row">
 			<div class="grid-12">
-				<PublishingWebControls:RichHtmlField FieldName="Block_x0020_1" runat="server"></PublishingWebControls:RichHtmlField>
-				<WebPartPages:WebPartZone id="WebpartZoneBlock1" runat="server" title="Zone Block 1"></WebPartPages:WebPartZone>
+				<%-- Spalte: Seiteninhalt --%>
+				<PublishingWebControls:RichHtmlField FieldName="PublishingPageContent" runat="server"></PublishingWebControls:RichHtmlField>
+				<WebPartPages:WebPartZone id="g_3A6479B913144DFAB55A8D099DE7CBED" runat="server" title="Zone 1"></WebPartPages:WebPartZone>
 			</div>
 		</div>
 		
 		<div class="row">
 			<div class="grid-6">
-				<%-- Spalte: Seiteninhalt --%>
-				<PublishingWebControls:RichHtmlField FieldName="PublishingPageContent" runat="server"></PublishingWebControls:RichHtmlField>
-				<WebPartPages:WebPartZone id="g_3A6479B913144DFAB55A8D099DE7CBED" runat="server" title="Zone 1"></WebPartPages:WebPartZone>
-			</div>
-			<div class="grid-6">
 				<%-- Spalte: Seiteninhalt 2 --%>
 				<PublishingWebControls:RichHtmlField FieldName="Seiteninhalt_x0020_2" runat="server"></PublishingWebControls:RichHtmlField>
 				<WebPartPages:WebPartZone id="g_8DAF81CDBCB843ACAAD384E4177CDED9" runat="server" title="Zone 2"></WebPartPages:WebPartZone>
+			</div>
+			<div class="grid-6">
+				<%-- Spalte: Seiteninhalt 3 --%>
+				<PublishingWebControls:RichHtmlField FieldName="Seiteninhalt_x0020_3" runat="server"></PublishingWebControls:RichHtmlField>
+				<WebPartPages:WebPartZone id="WebPartZone3" runat="server" title="Zone 2"></WebPartPages:WebPartZone>
 			</div>
 		</div>
 	</div>
