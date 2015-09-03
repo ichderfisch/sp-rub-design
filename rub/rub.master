@@ -256,10 +256,54 @@
                             </div>
 
                             <div id="footer" class="ms-dialogHidden">
-                                <div class="wrapper">
-                                    <p>Letzte Änderung: 
-									<SharePoint:FieldValue FieldName="Modified" runat="server" id="modified" ControlMode="display"/> | Ansprechpartner: <a href="mailto:webmaster@ruhr-uni-bochum.de">Kontakt</a>  </p> 
-                                </div>      
+                                <div class="row linkleiste">
+                                    <div class="grid-3">
+                                        <p>
+                                            <a href="http://www.rub.de"><img src="../_catalogs/masterpage/rub/img/logos/Logo_RUB_SCHWARZ-2.gif" width="129" height="34" alt="Logo Ruhr-Universität" style="margin-bottom:10px"><br>
+                                            </a> Universitätsstraße 150   | 44801 Bochum <br>
+                                            Tel.: +49 234 32201 <br>
+                                            <a href="http://www.ruhr-uni-bochum.de/impressum.htm" title="Impressum Ruhr-Universität Bochum">Impressum</a> | <a href="http://www.ruhr-uni-bochum.de/kontakt">Kontakt RUB</a>
+                                        </p>
+                                       </div>
+                                    <div class="grid-3">
+                                        <h6>Forschung und Lehre</h6>
+                                        <ul>
+                                            <li><a href="http://www.ruhr-uni-bochum.de/universitaet/fakultaeten/">Fakultäten</a></li>
+                                            <li><a href="http://studienangebot.rub.de/">Studienangebot der RUB</a></li>
+                                            <li><a href="http://www.rd.ruhr-uni-bochum.de/">Research Departments</a></li>
+                                            <li><a href="http://www.research-school.ruhr-uni-bochum.de/">Research School</a></li>
+                                            <li><a href="http://www.ruhr-uni-bochum.de/solvation/">Solvation Science @ RUB</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid-3">
+                                        <h6>Portale</h6>
+                                        <ul>
+                                            <li><a href="http://aktuell.ruhr-uni-bochum.de/">Aktuell</a></li>
+                                            <li><a href="http://www.rub.de/berufungsportal">Berufung</a></li>
+                                            <li><a href="http://www.ub.ruhr-uni-bochum.de/">Bibliothek</a></li>
+                                            <li><a href="http://www.ruhr-uni-bochum.de/chancengleich/">Chancengleich</a></li>
+                                            <li><a href="http://international.ruhr-uni-bochum.de/">International</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid-3">
+                                        <h6>Soziale Netzwerke </h6>
+                                        <ul class="socialfooter">
+                                            <li class="footerfb"><a href="https://www.facebook.com/RuhrUniBochum" title="Die RUB bei Facebook" target="_blank" class="footerfb">Facebook</a></li>
+                                            <li class="footertw"><a href="http://twitter.com/ruhrunibochum" title="Twitter-Kanal der RUB" target="_blank" class="footertw">Twitter</a></li>
+                                            <li class="footeryt"><a href="http://www.youtube.com/user/ruhruniversitaet/" title="Youtube-Kanal der RUB" target="_blank" class="footeryt">Youtube</a></li>
+                                            <li class="footerig"><a href="http://instagram.com/ruhrunibochum" target="_blank">Instagram</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>   
+                                <div class="fusszeile row">
+                                    <div class="grid-12">
+                                        <p>
+                                            Letzte Änderung: <SharePoint:FieldValue FieldName="Modified" runat="server" id="modified" ControlMode="display"/> | Ansprechpartner: <a href="mailto:webmaster@ruhr-uni-bochum.de">Kontakt</a>  
+                                        </p> 
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>     
                             </div>
                         </div>
 

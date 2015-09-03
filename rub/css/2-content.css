@@ -282,33 +282,39 @@
 	padding: 1em 0 0.5em 0;
 }
 
-  .seitennavigation h3 {
-	border-top: 2px solid #709108;
-    color: #003560;
-    padding: 0.3125em 0 0.625em;
-	font-weight:normal;
-	}
+.seitennavigation h3 {
+  border-top: 2px solid #709108;
+  color: #003560;
+  padding: 0.3125em 0 0.625em;
+  font-weight:normal;
+}
 
-  #inhalt {}
-  #inhalt h2{
-	border-top: 2px solid #003560;
-    color: #003560;
-    padding: 0.3125em 0 0.625em;
-	font-weight: normal;
-    }
-	#inhalt h3{
-	font-weight: normal;
-    }
-	#inhalt .boxgrau {   background-color: #F9F9F9;
-    border-color: #CCCCCC #F2F2F2 #F2F2F2;
-    border-right: 1px solid #F2F2F2;
-    border-style: solid;
-    border-width: 2px 1px 1px;
-    margin: 0 0 1.5em;
-    padding: 5px;}
-	#inhalt img {margin-bottom: 0.5em;}
+#inhalt h2{
+  border-top: 2px solid #003560;
+  color: #003560;
+  padding: 0.3125em 0 0.625em;
+  font-weight: normal;
+  }
+  
+#inhalt h3 {
+  font-weight: normal;
+}
+    
+#inhalt .boxgrau {  
+  background-color: #F9F9F9;
+  border-color: #CCCCCC #F2F2F2 #F2F2F2;
+  border-right: 1px solid #F2F2F2;
+  border-style: solid;
+  border-width: 2px 1px 1px;
+  margin: 0 0 1.5em;
+  padding: 5px; 
+}
+    
+#inhalt img {
+  margin-bottom: 0.5em;
+}
 
-  #rechte-spalte h3{
+#rechte-spalte h3 {
 	background-color:#E8EFCF;
 	border-top: 2px solid #709108;
 	padding: 5px;
@@ -317,19 +323,7 @@
 	font-weight:bold;
 	letter-spacing:1px;
 }
-    
-	   
-  #footer .subcl, #footer .subc,#footer .subcr {
-	font-size:0.9em;
-	color: #6b6b6b;
-	padding-left:10px;
-}
-  .fusszeile{
-	
-	border-top: 1px solid #efefef;
-}
   
-
  /******************************* Spezialfall: Startseite mit großem Bild und (!) Zielgruppen *************************/
  #header h6 {
 	font-weight:bold;
@@ -440,10 +434,7 @@ html body div.page_margins div.page div#header div.subcolumns div.c25l h2 { font
   	background-repeat:		no-repeat;
 }
 
-#footer a {
-	color: #6b6b6b;
-}
-#footer a:hover {text-decoration: underline;}
+
 #ansprechpartner, #umschaltung {padding-top:10px;}
 
 

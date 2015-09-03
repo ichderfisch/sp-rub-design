@@ -111,15 +111,85 @@
 }
 
 #main { margin: 10px 0; background: #fff; z-index:99; }
+
+/* Footer */
+
 #footer {
-	padding: 10px 0;
-	color:#666;
-	background: #f9f9f9;
-	border-top: 5px #efefef solid;
+  background: #f9f9f9;
+  border-top: 5px #efefef solid;
+  color: #6b6b6b;
+  font-size: 0.9em;
 }
 
-#footer .wrapper {
-	padding: 0 10px;
+#footer ul {
+    list-style-type: none;
+    list-style-image: url(../img/navigation/pfeil-rechts2.gif);
+}
+
+#footer .linkleiste,
+#footer .fusszeile p {
+  padding: 10px;
+}
+
+#footer a {
+	color: #6b6b6b;
+}
+#footer a:hover {
+	text-decoration: underline;
+}
+
+#footer h6 {
+  color:#6b6b6b; 
+  font-size:1em; 
+  font-weight:bold;
+}
+
+#footer .fusszeile {
+  border-top: 1px solid #efefef;
+  margin-top: 6px;
+}
+
+/* Social Media Footer */
+
+#footer .socialfooter {
+	margin-left: 0;
+	list-style: none;
+}
+
+#footer .socialfooter li {
+	list-style-image:none; 
+	margin-left: 0px; 
+	line-height:20px	
+}
+
+#footer .socialfooter a {
+	background-repeat:no-repeat; 
+	padding: 2px 0 2px 20px; 
+	background-position: 0 0;
+}
+
+#footer a[href*="facebook.com"]:link, 
+#footer a[href*="facebook.com"]:visited {
+	background-image:url(../img/icons/footer-fb.gif); 
+}
+
+#footer a[href*="twitter.com"]:link, 
+#footer a[href*="twitter.com"]:visited {
+	background-image:url(../img/icons/footer-tw.gif); 
+}
+
+#footer a[href*="youtube.com"]:link, 
+#footer a[href*="youtube.com"]:visited {
+	background-image:url(../img/icons/footer-yt.gif); 
+}
+
+#footer a[href*="instagram.com"]:link, 
+#footer a[href*="instagram.com"]:visited {
+	background-image:url(../img/icons/footer-ig.gif); 
+}
+
+#footer .socialfooter a:hover {
+	background-position: 0 -24px; 
 }
 
 
