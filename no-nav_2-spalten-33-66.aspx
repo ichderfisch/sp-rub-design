@@ -21,13 +21,6 @@
 	
 	<div class="container">
 		
-		<h2 id="contenttitle"><SharePoint:FieldValue FieldName="Title" runat="server"/></h2>
-		
-		<%-- Edit PageTitle. Visible in edit Mode only --%>
-		<PublishingWebControls:EditModePanel runat="server" CssClass="title-edit">
-             <SharePointWebControls:TextField runat="server" FieldName="Title"/>
-        </PublishingWebControls:EditModePanel>
-		
 		<div class="row">
 			<div class="grid-4">
 				<%-- Spalte: Seiteninhalt --%>
@@ -35,6 +28,13 @@
 				<WebPartPages:WebPartZone id="g_3A6479B913144DFAB55A8D099DE7CBED" runat="server" title="Zone 1"></WebPartPages:WebPartZone>
 			</div>
 			<div class="grid-8">
+				<h2 id="contenttitle"><SharePoint:FieldValue FieldName="Title" runat="server"/></h2>
+
+				<%-- Edit ContentTitle. Visible in edit Mode only --%>
+				<PublishingWebControls:EditModePanel runat="server" CssClass="title-edit">
+					<SharePointWebControls:TextField runat="server" FieldName="Title"/>
+				</PublishingWebControls:EditModePanel>
+				
 				<%-- Spalte: Seiteninhalt 2 --%>
 				<PublishingWebControls:RichHtmlField FieldName="Seiteninhalt_x0020_2" runat="server"></PublishingWebControls:RichHtmlField>
 				<WebPartPages:WebPartZone id="g_8DAF81CDBCB843ACAAD384E4177CDED9" runat="server" title="Zone 2"></WebPartPages:WebPartZone>

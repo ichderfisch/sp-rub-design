@@ -21,15 +21,15 @@
 	
 	<div class="container">
 		
-		<h2 id="contenttitle"><SharePoint:FieldValue FieldName="Title" runat="server"/></h2>
-		
-		<%-- Edit PageTitle. Visible in edit Mode only --%>
-		<PublishingWebControls:EditModePanel runat="server" CssClass="title-edit">
-             <SharePointWebControls:TextField runat="server" FieldName="Title"/>
-        </PublishingWebControls:EditModePanel>
-		
 		<div class="row">
 			<div class="grid-9">
+				<h2 id="contenttitle"><SharePoint:FieldValue FieldName="Title" runat="server"/></h2>
+
+				<%-- Edit ContentTitle. Visible in edit Mode only --%>
+				<PublishingWebControls:EditModePanel runat="server" CssClass="title-edit">
+					<SharePointWebControls:TextField runat="server" FieldName="Title"/>
+				</PublishingWebControls:EditModePanel>
+				
 				<%-- Spalte: Seiteninhalt --%>
 				<PublishingWebControls:RichHtmlField FieldName="PublishingPageContent" runat="server"></PublishingWebControls:RichHtmlField>
 				<WebPartPages:WebPartZone id="g_3A6479B913144DFAB55A8D099DE7CBED" runat="server" title="Zone 1"></WebPartPages:WebPartZone>

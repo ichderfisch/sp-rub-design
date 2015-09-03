@@ -23,10 +23,10 @@
 		
 		<h2 id="contenttitle"><SharePoint:FieldValue FieldName="Title" runat="server"/></h2>
 		
-		<%-- Edit PageTitle. Visible in edit Mode only --%>
+		<%-- Edit ContentTitle. Visible in edit Mode only --%>
 		<PublishingWebControls:EditModePanel runat="server" CssClass="title-edit">
-             <SharePointWebControls:TextField runat="server" FieldName="Title"/>
-        </PublishingWebControls:EditModePanel>
+			<SharePointWebControls:TextField runat="server" FieldName="Title"/>
+		</PublishingWebControls:EditModePanel>
 		
 		<div class="row">
 			<div class="grid-4">
