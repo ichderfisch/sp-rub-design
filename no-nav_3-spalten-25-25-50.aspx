@@ -21,7 +21,7 @@
 	
 	<div class="container">
 		
-		<h2><SharePoint:FieldValue FieldName="Title" runat="server"/></h2>
+		<h2 id="contenttitle"><SharePoint:FieldValue FieldName="Title" runat="server"/></h2>
 		
 		<%-- Edit PageTitle. Visible in edit Mode only --%>
 		<PublishingWebControls:EditModePanel runat="server" CssClass="title-edit">
