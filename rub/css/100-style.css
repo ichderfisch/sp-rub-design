@@ -8,18 +8,6 @@
  * @-yaml-minver  3.3
  */
 
-  /** 
-   * (en) Forcing vertical scrollbars in IE8, Firefox, Webkit & Opera 
-   * (de) Erzwingen vertikaler Scrollbalken in IE8, Firefox, Webkit & Opera 
-   *
-   * @workaround
-   * @affected IE8, FF, Webkit, Opera
-   * @css-for all
-   * @valid CSS3
-   */
-
-  body { overflow-y: scroll; }
-
   /*-------------------------------------------------------------------------*/
 
   /* (en) Marginal areas & page background */
