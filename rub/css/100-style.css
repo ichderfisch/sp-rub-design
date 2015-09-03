@@ -100,6 +100,49 @@
 
 #main { margin: 10px 0; background: #fff; z-index:99; }
 
+/* Boxes */
+
+.box {
+    margin: 0 0 1.5em 0;
+    padding: 0;
+}
+
+.box-gruen {
+    background-color: #F3F7EE;
+    border: 1px solid #cdd9a2;
+    border-top: 2px solid #709708;
+}
+
+.box-gruen h3 {
+    background-color: #E8EFCF;
+}
+
+.box-grau {
+    border: 1px solid #ececec;
+    border-top: 2px solid #ccc;
+    background-color: #F9F9F9;
+}
+
+.box-grau h3 {
+    background-color: #F0F0F0;
+}
+
+.box-grau h3,
+.box-gruen h3 {
+    border-top: none;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.box-gruen p,
+.box-gruen h3,
+.box-grau p,
+.box-grau h3 {
+  padding: 5px;
+}
+
+
 /* Footer */
 
 #footer {
