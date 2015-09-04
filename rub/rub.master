@@ -288,10 +288,10 @@
                                     <div class="grid-3">
                                         <h6>Soziale Netzwerke </h6>
                                         <ul class="socialfooter">
-                                            <li class="footerfb"><a href="https://www.facebook.com/RuhrUniBochum" title="Die RUB bei Facebook" target="_blank" class="footerfb">Facebook</a></li>
-                                            <li class="footertw"><a href="http://twitter.com/ruhrunibochum" title="Twitter-Kanal der RUB" target="_blank" class="footertw">Twitter</a></li>
-                                            <li class="footeryt"><a href="http://www.youtube.com/user/ruhruniversitaet/" title="Youtube-Kanal der RUB" target="_blank" class="footeryt">Youtube</a></li>
-                                            <li class="footerig"><a href="http://instagram.com/ruhrunibochum" target="_blank">Instagram</a></li>
+                                            <li><a href="https://www.facebook.com/RuhrUniBochum" title="Die RUB bei Facebook" target="_blank" class="footerfb">Facebook</a></li>
+                                            <li><a href="http://twitter.com/ruhrunibochum" title="Twitter-Kanal der RUB" target="_blank" class="footertw">Twitter</a></li>
+                                            <li><a href="http://www.youtube.com/user/ruhruniversitaet/" title="Youtube-Kanal der RUB" target="_blank" class="footeryt">Youtube</a></li>
+                                            <li><a href="http://instagram.com/ruhrunibochum" target="_blank">Instagram</a></li>
                                         </ul>
                                     </div>
                                 </div>
