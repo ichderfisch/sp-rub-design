@@ -19,15 +19,7 @@
 
 <asp:Content ContentPlaceholderID="PlaceHolderMain" runat="server">
 	
-	<div class="container">
-		
-		<h2 id="contenttitle"><SharePoint:FieldValue FieldName="Title" runat="server"/></h2>
-
-		<%-- Edit ContentTitle. Visible in edit Mode only --%>
-		<PublishingWebControls:EditModePanel runat="server" CssClass="title-edit">
-			<SharePointWebControls:TextField runat="server" FieldName="Title"/>
-		</PublishingWebControls:EditModePanel>
-		
+	<div class="container">	
 		<div class="row">
 			<div class="grid-3">
 				<%-- Spalte: Seiteninhalt --%>
@@ -40,6 +32,11 @@
 				<WebPartPages:WebPartZone id="g_8DAF81CDBCB843ACAAD384E4177CDED9" runat="server" title="Zone 2"></WebPartPages:WebPartZone>
 			</div>
 			<div class="grid-6">
+				<h2 id="contenttitle"><SharePoint:FieldValue FieldName="Title" runat="server"/></h2>
+				<%-- Edit ContentTitle. Visible in edit Mode only --%>
+				<PublishingWebControls:EditModePanel runat="server" CssClass="title-edit">
+					<SharePointWebControls:TextField runat="server" FieldName="Title"/>
+				</PublishingWebControls:EditModePanel>
 				<%-- Spalte: Seiteninhalt 3 --%>
 				<PublishingWebControls:RichHtmlField FieldName="Seiteninhalt_x0020_3" runat="server"></PublishingWebControls:RichHtmlField>
 				<WebPartPages:WebPartZone id="WebPartZone3" runat="server" title="Zone 3"></WebPartPages:WebPartZone>
