@@ -233,10 +233,9 @@
    *
    */
 
-  .col1 { float: left; width: 25%;  margin:0 }
-  .col2 { width: auto; margin: 0 2% 0 25%}
-  .col1_content { padding: 0 20px 0 10px }
-  .col2_content { padding: 0 10px }
+  #sideNavBox.col1 { float: left; margin-right:0 }
+  .col2 { width: auto; margin: 0 2% 0 25% } /* margin-left: 240px;  */
+  .col1_content { padding-left: 10px }
 
 
 
