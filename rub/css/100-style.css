@@ -127,21 +127,22 @@
     background-color: #F0F0F0;
 }
 
-.box-grau h3,
-.box-gruen h3 {
+.box h3 {
     border-top: none;
     font-size: 1em;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-.box-gruen p,
-.box-gruen h3,
-.box-grau p,
-.box-grau h3 {
+.box p,
+.box h3 {
   padding: 5px;
 }
 
+.box ul {
+    list-style-type: none;
+    list-style-image: url(../img/navigation/pfeil-rechts2.gif);
+}
 
 /* Footer */
 
