@@ -1,0 +1,69 @@
+﻿<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>Linkliste - Listenelement</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">
+    'Line 1'{Link}:'URLOWSURLH',
+    'Line 2'{Beschreibung}:'Link-BeschreibungOWSMTXT',
+    'Kategorie'{Kategorie}:'owstaxIdLink-Kategorie'
+</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string">Diese Elementanzeigevorlage zeigt ein kleines Miniaturansichtssymbol neben einem Link des Elementtitels an mit einer zusÃ¤tzlichen Zeile, die fÃ¼r eine benutzerdefinierte, verwaltete Eigenschaft zur VerfÃ¼gung steht.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://public.ruhr-uni-bochum.de/ps/projektbuero/_catalogs/masterpage/rub/display-template/Content Web Parts/Item_PM-Software-Details.html, Konvertierung erfolgreich.</mso:HtmlDesignStatusAndPreview>
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+    <!--
+            Warning: Do not try to add HTML to this section. Only the contents of the first <div>
+            inside the <body> tag will be used while executing Display Template code. Any HTML that
+            you add to this section will NOT become part of your Display Template.
+    -->
+    <script>
+        $includeLanguageScript(this.url, "~sitecollection/_catalogs/masterpage/Display Templates/Language Files/{Locale}/CustomStrings.js");
+    </script>
+
+    <!--
+        Use the div below to author your Display Template. Here are some things to keep in mind:
+        * Surround any JavaScript logic as shown below using a "pound underscore" (#_ ... _#) token
+        inside a comment.
+
+        * Use the values assigned to your variables using an "underscore pound equals"
+        (_#= ... =#_) token.
+    -->
+
+    <div id="TwoLines">
+<!--#_
+
+var line1 = $getItemValue(ctx, "Line 1");
+var line2 = $getItemValue(ctx, "Line 2");
+
+line1.overrideValueRenderer($contentLineText);
+line2.overrideValueRenderer($contentLineText);
+
+var LinkArray = new Array();
+
+// Remove leading and trailing spaces from string, than split.
+var re = /\s*,\s*/;
+LinkArray = line1.inputValue.split(re);
+var LinkURL = LinkArray[0];
+var LinkTitle = LinkArray[1];
+
+_#-->
+                <div class="linklist-item">
+                    <a href="_#= LinkURL =#_" target="_blank" class="linklist-url">_#= LinkTitle =#_</a><br>
+                    <span class="linklist-desc">_#= line2 =#_</span>
+                </div>
+
+        </div>
+
+</body>
+</html>
