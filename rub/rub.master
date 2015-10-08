@@ -151,8 +151,7 @@
                                             </SharePoint:AjaxDelta>
                                         </h1>
                                         <%-- TODO: Style PageTitle --%>
-                                        <h2>
-										<SharePoint:ProjectProperty Property="Title" runat="server" visible="false"/></h2>
+                                        <h2><SharePoint:ProjectProperty Property="Title" runat="server" visible="false"/></h2>
                                     </div>
                                 </div>
                             </div>
