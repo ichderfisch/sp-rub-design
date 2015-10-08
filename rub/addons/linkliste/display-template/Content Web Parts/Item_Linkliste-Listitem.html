@@ -7,8 +7,9 @@
 <mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
 <mso:ManagedPropertyMapping msdt:dt="string">
     'Line 1'{Link}:'URLOWSURLH',
-    'Line 2'{Beschreibung}:'Link-BeschreibungOWSMTXT',
-    'Kategorie'{Kategorie}:'owstaxIdLink-Kategorie'
+    'Line 2'{Beschreibung}:'Link-Beschreibung0OWSMTXT',
+    'FileExtension',
+    'SecondaryFileExtension'
 </mso:ManagedPropertyMapping>
 <mso:MasterPageDescription msdt:dt="string">Diese Elementanzeigevorlage zeigt ein kleines Miniaturansichtssymbol neben einem Link des Elementtitels an mit einer zusÃ¤tzlichen Zeile, die fÃ¼r eine benutzerdefinierte, verwaltete Eigenschaft zur VerfÃ¼gung steht.</mso:MasterPageDescription>
 <mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
@@ -59,8 +60,10 @@ var LinkTitle = LinkArray[1];
 
 _#-->
                 <div class="linklist-item">
-                    <a href="_#= LinkURL =#_" target="_blank" class="linklist-url">_#= LinkTitle =#_</a><br>
-                    <span class="linklist-desc">_#= line2 =#_</span>
+                    <p class="linklist-desc">
+                        <a href="_#= LinkURL =#_" target="_blank" class="linklist-url">_#= LinkTitle =#_</a><br />
+                        _#= line2 =#_
+                    </p>
                 </div>
 
         </div>
